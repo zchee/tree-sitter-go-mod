@@ -3,6 +3,7 @@
   "replace"
   "go"
   "toolchain"
+  "godebug"
   "exclude"
   "retract"
   "module"

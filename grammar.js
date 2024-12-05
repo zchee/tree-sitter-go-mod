@@ -12,6 +12,7 @@ module.exports = grammar({
         $.module_directive,
         $.go_directive,
         $.toolchain_directive,
+        $.godebug_directive,
         $.require_directive,
         $.exclude_directive,
         $.replace_directive,
@@ -69,6 +70,17 @@ module.exports = grammar({
       ),
 
     toolchain_name: ($) => $._string_or_ident,
+
+    godebug_directive: ($) =>
+      seq(
+        "godebug",
+        choice(
+          $.godebug_spec,
+          seq("(", "\n", repeat($.godebug_spec), ")", "\n")
+        )
+      ),
+
+    godebug_spec: ($) => $._string_or_ident,
 
     require_directive: ($) =>
       seq(

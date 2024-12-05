@@ -27,3 +27,9 @@
   ("(") @structure.open
   (")") @structure.close
 )
+
+(godebug_directive
+  "godebug" @structure.anchor
+  ("(") @structure.open
+  (")") @structure.close
+)

@@ -78,6 +78,40 @@
     }
   },
   {
+    "type": "godebug_directive",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "godebug_spec",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "godebug_spec",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "interpreted_string_literal",
+          "named": true
+        },
+        {
+          "type": "raw_string_literal",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "interpreted_string_literal",
     "named": true,
     "fields": {},
@@ -231,6 +265,7 @@
   {
     "type": "source_file",
     "named": true,
+    "root": true,
     "fields": {},
     "children": {
       "multiple": true,
@@ -242,6 +277,10 @@
         },
         {
           "type": "go_directive",
+          "named": true
+        },
+        {
+          "type": "godebug_directive",
           "named": true
         },
         {
@@ -367,6 +406,10 @@
   },
   {
     "type": "go",
+    "named": false
+  },
+  {
+    "type": "godebug",
     "named": false
   },
   {
